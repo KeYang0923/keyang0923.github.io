@@ -10,10 +10,10 @@
   <meta name="description" content="Personal website for Ke Yang based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
-  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:4000/assets/img/favicon.ico">
 
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/projects/">
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/projects/">
 </head>
 
 
@@ -44,7 +44,7 @@
 
       <div class="trigger">
         <!-- About -->
-        <a class="page-link" href="/">about</a>
+        <a class="page-link" href="http://localhost:4000/">about</a>
 
         <!-- Pages -->
         
@@ -53,18 +53,18 @@
           
         
           
-            <a class="page-link" href="/projects/">projects</a>
+            <a class="page-link" href="http://localhost:4000/projects/">projects</a>
           
         
           
-            <a class="page-link" href="/publications/">publications</a>
+            <a class="page-link" href="http://localhost:4000/publications/">publications</a>
           
         
           
         
 
         <!-- CV link -->
-        <a class="page-link" href="/assets/pdf/CV_KeYang.pdf">full CV</a>
+        <a class="page-link" href="http://localhost:4000/assets/pdf/CV_KeYang.pdf">vitae</a>
 
       </div>
     </nav>
@@ -86,126 +86,122 @@
 
   <article class="post-content projects clearfix">
     <div class="projects">
-
-    <blockquote>
-  <p>Fairness in rankings</p>
-</blockquote>
-
-<p>Ranking are ubiquitous in many context, such as recommendations, college admissions, and employment.
+    <table>
+    
+    
+      <tr>
+        <td class="name">Fairness in rankings</td>
+        <td class="desp">
+          Ranking are ubiquitous in many context, such as recommendations, college admissions, and employment.
 They introduce competition for the top positions, and candidates in the ranking cannot be considered independently of each other.
 Considering college admissions, review committee wants to understand the representation of groups based on demographic, behavioral
 or other characteristics in the past admitted students, and then decide whether to develop policies to increase representation of
-particular groups in the future. How to quantify the representation of groups in a ranking?</p>
+particular groups in the future. How to quantify the representation of groups in a ranking?
 
-<ul>
-  <li>Our work in <a href="http://dl.acm.org/citation.cfm?doid=3085504.3085526">Measuring fairness in ranked outputs</a> formalized a notion of fairness
+<br />
+Our work in <a href="http://dl.acm.org/citation.cfm?doid=3085504.3085526">Measuring fairness in ranked outputs</a> formalized a notion of fairness
 in rankings and provided measures to quantify statistical parity over the representations of groups. We also provided a data generation
 procedure to study the behaviors of the fairness measures under different scenarios of the degree of unfairness and the population of
 group. Our measures and generation procedure are then used by other researchers to detect cases of biased representations of groups.
-Code available at <a href="https://github.com/DataResponsibly/FairRank">GitHub</a>.</li>
-</ul>
+Code available at <a href="https://github.com/DataResponsibly/FairRank">GitHub</a>.
 
 
-
-    <blockquote>
-  <p>Causal intersectionality in rankings</p>
-</blockquote>
-
-<p>More often, groups of interest are defined by multiple demographic characteristics (e.g. gender and race) such that each of them might
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="name">Causal intersectionality in rankings</td>
+        <td class="desp">
+          More often, groups of interest are defined by multiple demographic characteristics (e.g. gender and race) such that each of them might
 force a form of structural oppression on some groups and the oppression are not independent with each other. This is termed as
 intersectionality in the literature, which includes numerous case studies, and theoretical and empirical work showing that people
 adversely impacted by more than one form of structural oppression face additional challenges in ways that are more than additive.
 For example, in the college admissions, a ranking of student candidates might fairly represent gender groups or racial groups, while
 still have inadequate representation of a group by the intersection of both gender and race (e.g. Black female students).
+<br />
+
 How to achieve a ranking that is fair with respect to all of the demographic characteristics and their interactions instead of
-treating them separately?</p>
-
-<ul>
-  <li>Our work in <a href="https://arxiv.org/abs/2006.08688">Causal intersectionality for fair ranking</a> formalized
+treating them separately? Our work in <a href="https://arxiv.org/abs/2006.08688">Causal intersectionality for fair ranking</a> formalized
 an explicit notion of intersectionality in rankings and provided a causal modeling framework to compute fair rankings to capture
-intersectional interactions between multiple demographic characteristics. Code available at <a href="https://github.com/DataResponsibly/CIFRank">GitHub</a>.</li>
-</ul>
+intersectional interactions between multiple demographic characteristics. Code available at <a href="https://github.com/DataResponsibly/CIFRank">GitHub</a>.
 
-
-    <blockquote>
-  <p>Diversity in rankings</p>
-</blockquote>
-
-<p>Considering college admissions again, review committee wants to admit a diverse set of student
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="name">Diversity in rankings</td>
+        <td class="desp">
+          Considering college admissions again, review committee wants to admit a diverse set of student
 candidates based on some characteristics. This goal can be formed as diversity constraints on
 the admitted students that specify the lower bound of the number of student candidates with some
 characteristics. For example, review committee wants to admit at least 5 female and 5 Black students this year.
-How to achieve diversity goal when the review committee has a budget of admitted students in a rolling admission?</p>
-
-<ul>
-  <li>Our work in <a href="http://openproceedings.org/2018/conf/edbt/paper-98.pdf">Online Set Selection with fairness and diversity constraints</a>
+How to achieve diversity goal when the review committee has a budget of admitted students in a rolling admission?
+Our work in <a href="http://openproceedings.org/2018/conf/edbt/paper-98.pdf">Online Set Selection with fairness and diversity constraints</a>
 formalized a diverse K-<a href="https://en.wikipedia.org/wiki/Secretary_problem">Secretary problem</a> and provided algorithms
-to select the student candidates that have a higher quality and satisfy the diversity constraints at the same time.</li>
-</ul>
+to select the student candidates that have a higher quality and satisfy the diversity constraints at the same time.
+<br />
 
-<p>When the student candidates from some disadvantaged groups show lower tests scores than others (e.g. due to historical societal bias),
+When the student candidates from some disadvantaged groups show lower tests scores than others (e.g. due to historical societal bias),
 we observed that the diversity constraints cause the student candidates are selected from those groups are
-less qualified than the ones selected from other groups in such rolling admission.</p>
-
-<ul>
-  <li>To address this issue, our work in <a href="https://www.ijcai.org/Proceedings/2019/0836.pdf">Balanced Ranking with Diversity Constraints</a>
+less qualified than the ones selected from other groups in such rolling admission. To address this issue,
+our work in <a href="https://www.ijcai.org/Proceedings/2019/0836.pdf">Balanced Ranking with Diversity Constraints</a>
 formalized a notion of inner-group fairness that balances the impact of diversity constraints on all the groups
-instead of only negative impact on historically disadvantaged groups.</li>
-</ul>
+instead of only negative impact on historically disadvantaged groups.
 
-
-    <blockquote>
-  <p>Interpretability in rankings</p>
-</blockquote>
-
-<p>The data-intensive systems are typically complex: developed under certain context and
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="name">Interpretability in rankings</td>
+        <td class="desp">
+          The data-intensive systems are typically complex: developed under certain context and
 hidden assumptions, and carried out in multiple steps. Users need to be able to interpret
-the results with regards to their own tasks. To help users to understand fairness in rankings,
-I built <a href="http://demo.dataresponsibly.com/rankingfacts">Ranking Facts</a>, a web-based tool that
-generates a ‘‘nutritional label’’ for rankings. It implements our research results on fairness,
-stability, and transparency for rankings. A label is presented to users as a collection of visual
-widgets, drawing an analogy to nutrition facts in the food industry.</p>
+the results with regards to their own tasks.
+<br />
 
-<ul>
-  <li>Our work in <a href="https://dl.acm.org/citation.cfm?doid=3183713.3193568">A Nutritional Label for Rankings</a>
+To help users to understand fairness in rankings, I built <a href="http://demo.dataresponsibly.com/rankingfacts">Ranking Facts</a>,
+a web-based tool that generates a ‘‘nutritional label’’ for rankings. It implements our research results on fairness,
+stability, and transparency for rankings. A label is presented to users as a collection of visual widgets, drawing
+an analogy to nutrition facts in the food industry. Our work in <a href="https://dl.acm.org/citation.cfm?doid=3183713.3193568">A Nutritional Label for Rankings</a>
 formalized a notion of interpretability-by-design when nutritional labels for rankings are derived automatically or
 semi-automatically as part of the complex process that gave rise to the data or model they describe.
-Code available at <a href="github.com/DataResponsibly/RankingFacts">GitHub</a>.</li>
-</ul>
+Code available at <a href="github.com/DataResponsibly/RankingFacts">GitHub</a>.
 
-
-    <blockquote>
-  <p>FairDAGs</p>
-</blockquote>
-
-<p><a href="https://dataresponsibly.hpc.nyu.edu/fairdags">fairDAGs</a>, a web-based tool
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="name">FairDAGs</td>
+        <td class="desp">
+          <a href="https://dataresponsibly.hpc.nyu.edu/fairdags">fairDAGs</a>, a web-based tool
 that extracts directed acyclic graph (DAG) representation of the pipelines.
 It tracks the changes of the distributions of targets and groups (based on some user-specified characteristics)
-due to each operation in the pipelines.</p>
+due to each operation in the pipelines. 
+<br />
 
-<ul>
-  <li>As a starting point, our work <a href="https://hilda.io/2020/proceedings/HILDA2020_paper9.pdf">Fairness-Aware Instrumentation of Preprocessing Pipelines for Machine Learning</a>
-provided an intuitive way to interpret fairness in data science pipelines. Code available at <a href="github.com/DataResponsibly/fairDAGs">GitHub</a>.</li>
-</ul>
+As a starting point, our work <a href="https://hilda.io/2020/proceedings/HILDA2020_paper9.pdf">Fairness-Aware Instrumentation of Preprocessing Pipelines for Machine Learning</a>
+provided an intuitive way to interpret fairness in data science pipelines. Code available at <a href="github.com/DataResponsibly/fairDAGs">GitHub</a>.
 
-
-    <blockquote>
-  <p>FairDeploy</p>
-</blockquote>
-
-<p>With machine learning (ML) algorithms extensively applied in different applications, the need of
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="name">FairDeploy</td>
+        <td class="desp">
+          With machine learning (ML) algorithms extensively applied in different applications, the need of
 incorporating responsibility into such ML-driven data science pipelines has never been more urgent. However,
 limited works have been done to provide system-level supports for users, especially those with limited ML background,
-to develop, evaluate, and manage their pipelines.</p>
+to develop, evaluate, and manage their pipelines. 
+<br />
 
-<ul>
-  <li>I’m currently building a benchmark ‘‘fairDeploy’’ that
-provides systematically evaluation of technical bias in the deployment of ML algorithms.</li>
-</ul>
+I’m currently building a benchmark ‘‘fairDeploy’’ that
+provides systematically evaluation of technical bias in the deployment of ML algorithms.
 
-
-<div>
-</div></div>
+        </td>
+      </tr>
+    
+    </table>
+</div>
 
   </article>
 
@@ -221,7 +217,7 @@ provides systematically evaluation of technical bias in the deployment of ML alg
     <footer>
 
   <div class="wrapper">
-    &copy; Copyright 2020 .
+    &copy; Copyright 2021 .
     Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
     
@@ -234,15 +230,15 @@ provides systematically evaluation of technical bias in the deployment of ML alg
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 
 <!-- Load Common JS -->
-<script src="/assets/js/common.js"></script>
+<script src="http://localhost:4000/assets/js/common.js"></script>
 
 
 
 
 
 <!-- Include custom icon fonts -->
-<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="/assets/css/academicons.min.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.min.css">
 
 <!-- Google Analytics -->
 <script>
