@@ -113,7 +113,7 @@ particular groups in the future. How to quantify the representation of groups in
 
 <br />
 
-Our work in <a href="http://dl.acm.org/citation.cfm?doid=3085504.3085526">Measuring fairness in ranked outputs</a>, the first to formalize fairness in ranking, achieves proportional
+Our work in <a href="http://dl.acm.org/citation.cfm?doid=3085504.3085526">Measuring Fairness in Ranked Outputs</a>, the first to formalize fairness in ranking, achieves proportional
 representations across groups in the ranked outcome and is based on the belief that comparisons among groups are unfair to disadvantaged subjects when their input
 data reveals biases. We model these unfair group comparisons as the deviation from an impartial stochastic ranking process and, following this model, propose a ranking
 generation procedure that implements various levels of unfair comparisons. We also propose an optimization framework that produces fair rankings. We find that our framework has potential to improve fairness in ranked outcomes, while maintaining
@@ -145,7 +145,7 @@ utility subject to input constraints. We find that our approach reduces these un
         <td class="desp">
           Next we formalize intersectional fairness in rankings using a causal approach.
 
-Our work in <a href="https://drops.dagstuhl.de/opus/volltexte/2021/13875/">Causal intersectionality for fair ranking</a> proposes a framework CIF-Rank that models intersectional discrimination as the effects of demographic attributes on other variables in the input and mitigates the
+Our work in <a href="https://drops.dagstuhl.de/opus/volltexte/2021/13875/">Causal Intersectionality and Fair Ranking</a> proposes a framework CIF-Rank that models intersectional discrimination as the effects of demographic attributes on other variables in the input and mitigates the
 unfair effects of these attributes on ranked outcomes through intervening on the score distribution in the input. We find that CIF-Rank produces intersectionally
 fair rankings in different scenarios. We predict that our framework will be useful for mitigating the negative impacts of ranking tasks on people due to attributes
 that are out their control, and supporting decision makers to flexibly express their requirements for fair rankings in different contexts.
@@ -162,8 +162,9 @@ Code available at <a href="https://github.com/DataResponsibly/CIFRank">GitHub</a
 Ranking Facts generates “nutritional label” that explains the ranking process and ranked outcomes to a user with appropriately summarized information. Specifically,
 the nutritional label in Ranking Facts is made up of a collection of visual widgets, where each widget shows an aspect of the outcomes such as fairness, diversity,
 a “nutritional label” for score-based rankings. Ranking Facts is made up of a collection of visual widgets, each showing an aspect of ranked outcomes including
-fairness, diversity, stability, and transparency. The fairness widget integrates the fairness measure rND proposed in the paper of <a href="http://dl.acm.org/citation.cfm?doid=3085504.3085526">Measuring fairness in ranked outputs</a> and FA*IR proposed by <a href="https://dl.acm.org/doi/10.1145/3132847.3132938">Zehlike et al</a>.
+fairness, diversity, stability, and transparency. The fairness widget integrates the fairness measure rND proposed in the paper of <a href="http://dl.acm.org/citation.cfm?doid=3085504.3085526">Measuring Fairness in Ranked Outputs</a> and FA*IR proposed by <a href="https://dl.acm.org/doi/10.1145/3132847.3132938">Zehlike et al</a>.
 
+A <a href="https://dl.acm.org/doi/pdf/10.1145/3183713.3193568">demo paper</a> is published at SIGMOD 2018.
 Ranking Facts can be accessed at <a href="https://dataresponsibly.github.io/tools/">dataresponsibly.github.io/tools/</a>
 Source code is available at <a href="github.com/DataResponsibly/RankingFacts">GitHub</a>.
 
@@ -176,7 +177,7 @@ Source code is available at <a href="github.com/DataResponsibly/RankingFacts">Gi
           fairDAGs is a web-based tool that extracts directed acyclic graph (DAG) representation of the pipelines.
 It tracks the changes of the distributions of targets and groups (based on some user-specified characteristics) due to each operation in the pipelines.
 
-As a starting point, our work in <a href="https://hilda.io/2020/proceedings/HILDA2020_paper9.pdf">Fairness-Aware Instrumentation of Preprocessing Pipelines for Machine Learning</a>
+Our work in <a href="https://hilda.io/2020/proceedings/HILDA2020_paper9.pdf">Fairness-Aware Instrumentation of Preprocessing Pipelines for Machine Learning</a>
 provides an intuitive way to interpret fairness in data science pipelines.
 
 Code available at <a href="github.com/DataResponsibly/fairDAGs">GitHub</a>.
