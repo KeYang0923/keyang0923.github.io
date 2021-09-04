@@ -85,22 +85,14 @@
   </header>
 
   <article class="post-content 3_project clearfix">
-    <p>Considering college admissions again, review committee wants to admit a diverse set of student
-candidates based on some characteristics. This goal can be formed as diversity constraints on
-the admitted students that specify the lower bound of the number of student candidates with some
-characteristics. For example, review committee wants to admit at least 5 female and 5 Black students this year.
-How to achieve diversity goal when the review committee has a budget of admitted students in a rolling admission?
-Our work in <a href="http://openproceedings.org/2018/conf/edbt/paper-98.pdf">Online Set Selection with fairness and diversity constraints</a>
-formalized a diverse K-<a href="https://en.wikipedia.org/wiki/Secretary_problem">Secretary problem</a> and provided algorithms
-to select the student candidates that have a higher quality and satisfy the diversity constraints at the same time.
-<br /></p>
+    <p>Next we formalize intersectional fairness in rankings using a causal approach.</p>
 
-<p>When the student candidates from some disadvantaged groups show lower tests scores than others (e.g. due to historical societal bias),
-we observed that the diversity constraints cause the student candidates are selected from those groups are
-less qualified than the ones selected from other groups in such rolling admission. To address this issue,
-our work in <a href="https://www.ijcai.org/Proceedings/2019/0836.pdf">Balanced Ranking with Diversity Constraints</a>
-formalized a notion of inner-group fairness that balances the impact of diversity constraints on all the groups
-instead of only negative impact on historically disadvantaged groups.</p>
+<p>Our work in <a href="https://drops.dagstuhl.de/opus/volltexte/2021/13875/">Causal intersectionality for fair ranking</a> proposes a framework CIF-Rank that models intersectional discrimination as the effects of demographic attributes on other variables in the input and mitigates the
+unfair effects of these attributes on ranked outcomes through intervening on the score distribution in the input. We find that CIF-Rank produces intersectionally
+fair rankings in different scenarios. We predict that our framework will be useful for mitigating the negative impacts of ranking tasks on people due to attributes
+that are out their control, and supporting decision makers to flexibly express their requirements for fair rankings in different contexts.</p>
+
+<p>Code available at <a href="https://github.com/DataResponsibly/CIFRank">GitHub</a>.</p>
 
   </article>
 

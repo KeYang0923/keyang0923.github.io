@@ -85,87 +85,87 @@
   </header>
 
   <article class="post-content projects clearfix">
-    <div class="projects">
+    <p>The overwhelming amount of data in almost every aspect of people’s lives makes many decision-making processes rely on algorithmic systems able to sort the data. 
+Ranking, as a form of outcome from these algorithmic systems, is used in education, employment, financial services, health and personal well-being, and many other
+domains.</p>
+
+<p>Incorporating ethics and legal compliance into algorithmic systems has attracted significant research interest in data management, machine learning, information
+retrieval, and recommender systems in the past few years. Several normative dimensions of algorithmic systems, including fairness, diversity, interpretability, transparency, and accountability, have been recognized as important and have
+been incorporated into classification tasks. Incorporating these same dimensions into algorithmic ranking approaches, however, has not received as much research attention as compared to classification.</p>
+
+<p>During the PhD study, I focused on formalizing fairness for ranking tasks in different contexts and propose approaches to incorporate fairness into the ranked outcome. We believe
+that enforcing fairness in ranking is essential, especially when input data of the ranker reveals biases and intersectional discrimination.</p>
+
+<div class="projects">
     <table>
     
     
       <tr>
-        <td class="name">Fairness in rankings</td>
+        <td class="name">Fairness in Ranked Outcomes</td>
         <td class="desp">
-          Ranking are ubiquitous in many context, such as recommendations, college admissions, and employment.
+          <blockquote>
+  Ranking are ubiquitous in many context, such as recommendations, college admissions, and employment.
 They introduce competition for the top positions, and candidates in the ranking cannot be considered independently of each other.
 Considering college admissions, review committee wants to understand the representation of groups based on demographic, behavioral
 or other characteristics in the past admitted students, and then decide whether to develop policies to increase representation of
 particular groups in the future. How to quantify the representation of groups in a ranking?
+</blockquote>
 
 <br />
-Our work in <a href="http://dl.acm.org/citation.cfm?doid=3085504.3085526">Measuring fairness in ranked outputs</a> formalized a notion of fairness
-in rankings and provided measures to quantify statistical parity over the representations of groups. We also provided a data generation
-procedure to study the behaviors of the fairness measures under different scenarios of the degree of unfairness and the population of
-group. Our measures and generation procedure are then used by other researchers to detect cases of biased representations of groups.
-Code available at <a href="https://github.com/DataResponsibly/FairRank">GitHub</a>.
+
+Our work in <a href="http://dl.acm.org/citation.cfm?doid=3085504.3085526">Measuring fairness in ranked outputs</a>, the first to formalize fairness in ranking, achieves proportional
+representations across groups in the ranked outcome and is based on the belief that comparisons among groups are unfair to disadvantaged subjects when their input
+data reveals biases. We model these unfair group comparisons as the deviation from an impartial stochastic ranking process and, following this model, propose a ranking
+generation procedure that implements various levels of unfair comparisons. We also propose an optimization framework that produces fair rankings. We find that our framework has potential to improve fairness in ranked outcomes, while maintaining
+utility. We focus specifically on a single form of discrimination that performs comparison between groups that are disjoint and often defined by considering only one demographic attribute or several of them such as gender, race, and disability status, in combination.
+
+Code for this project can be found at <a href="https://github.com/DataResponsibly/FairRank">GitHub</a>.
+
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="name">Balanced Ranking with In-group Fairness and Diversity</td>
+        <td class="desp">
+          We extend our focus to intersectional discrimination, where several forms of distinct treatment may occur, intersect with each other, and produce new forms of
+disadvantages.
+
+First, we study how unfair comparisons among individuals within groups, as a new form of disadvantage induced by intersectional discrimination, in rankings
+constrained by diversity in the input.
+
+Our work in <a href="https://www.ijcai.org/Proceedings/2019/0836.pdf">Balanced Ranking with Diversity Constraints</a> formalizes in-group fairness to quantify such comparisons within groups in these ranking processes and integrate our formalization as fairness constraints into an Integer Linear Program that maximizes
+utility subject to input constraints. We find that our approach reduces these unfair in-group comparisons, especially within the disadvantaged groups who may suffer from intersectional discrimination more than others, while paying a small cost of utility.
 
 
         </td>
       </tr>
     
       <tr>
-        <td class="name">Causal intersectionality in rankings</td>
+        <td class="name">Causal Intersectionality and Fair Ranking</td>
         <td class="desp">
-          More often, groups of interest are defined by multiple demographic characteristics (e.g. gender and race) such that each of them might
-force a form of structural oppression on some groups and the oppression are not independent with each other. This is termed as
-intersectionality in the literature, which includes numerous case studies, and theoretical and empirical work showing that people
-adversely impacted by more than one form of structural oppression face additional challenges in ways that are more than additive.
-For example, in the college admissions, a ranking of student candidates might fairly represent gender groups or racial groups, while
-still have inadequate representation of a group by the intersection of both gender and race (e.g. Black female students).
-<br />
+          Next we formalize intersectional fairness in rankings using a causal approach.
 
-How to achieve a ranking that is fair with respect to all of the demographic characteristics and their interactions instead of
-treating them separately? Our work in <a href="https://arxiv.org/abs/2006.08688">Causal intersectionality for fair ranking</a> formalized
-an explicit notion of intersectionality in rankings and provided a causal modeling framework to compute fair rankings to capture
-intersectional interactions between multiple demographic characteristics. Code available at <a href="https://github.com/DataResponsibly/CIFRank">GitHub</a>.
+Our work in <a href="https://drops.dagstuhl.de/opus/volltexte/2021/13875/">Causal intersectionality for fair ranking</a> proposes a framework CIF-Rank that models intersectional discrimination as the effects of demographic attributes on other variables in the input and mitigates the
+unfair effects of these attributes on ranked outcomes through intervening on the score distribution in the input. We find that CIF-Rank produces intersectionally
+fair rankings in different scenarios. We predict that our framework will be useful for mitigating the negative impacts of ranking tasks on people due to attributes
+that are out their control, and supporting decision makers to flexibly express their requirements for fair rankings in different contexts.
+
+Code available at <a href="https://github.com/DataResponsibly/CIFRank">GitHub</a>.
 
         </td>
       </tr>
     
       <tr>
-        <td class="name">Diversity in rankings</td>
+        <td class="name">A Nutritional Label for Score-based Rankings</td>
         <td class="desp">
-          Considering college admissions again, review committee wants to admit a diverse set of student
-candidates based on some characteristics. This goal can be formed as diversity constraints on
-the admitted students that specify the lower bound of the number of student candidates with some
-characteristics. For example, review committee wants to admit at least 5 female and 5 Black students this year.
-How to achieve diversity goal when the review committee has a budget of admitted students in a rolling admission?
-Our work in <a href="http://openproceedings.org/2018/conf/edbt/paper-98.pdf">Online Set Selection with fairness and diversity constraints</a>
-formalized a diverse K-<a href="https://en.wikipedia.org/wiki/Secretary_problem">Secretary problem</a> and provided algorithms
-to select the student candidates that have a higher quality and satisfy the diversity constraints at the same time.
-<br />
+          We develop <em>Ranking Facts</em> tool that aims to provide explanations about score-based rankings.
+Ranking Facts generates “nutritional label” that explains the ranking process and ranked outcomes to a user with appropriately summarized information. Specifically,
+the nutritional label in Ranking Facts is made up of a collection of visual widgets, where each widget shows an aspect of the outcomes such as fairness, diversity,
+a “nutritional label” for score-based rankings. Ranking Facts is made up of a collection of visual widgets, each showing an aspect of ranked outcomes including
+fairness, diversity, stability, and transparency. The fairness widget integrates the fairness measure rND proposed in the paper of <a href="http://dl.acm.org/citation.cfm?doid=3085504.3085526">Measuring fairness in ranked outputs</a> and FA*IR proposed by <a href="https://dl.acm.org/doi/10.1145/3132847.3132938">Zehlike et al</a>.
 
-When the student candidates from some disadvantaged groups show lower tests scores than others (e.g. due to historical societal bias),
-we observed that the diversity constraints cause the student candidates are selected from those groups are
-less qualified than the ones selected from other groups in such rolling admission. To address this issue,
-our work in <a href="https://www.ijcai.org/Proceedings/2019/0836.pdf">Balanced Ranking with Diversity Constraints</a>
-formalized a notion of inner-group fairness that balances the impact of diversity constraints on all the groups
-instead of only negative impact on historically disadvantaged groups.
-
-        </td>
-      </tr>
-    
-      <tr>
-        <td class="name">Interpretability in rankings</td>
-        <td class="desp">
-          The data-intensive systems are typically complex: developed under certain context and
-hidden assumptions, and carried out in multiple steps. Users need to be able to interpret
-the results with regards to their own tasks.
-<br />
-
-To help users to understand fairness in rankings, I built <a href="http://demo.dataresponsibly.com/rankingfacts">Ranking Facts</a>,
-a web-based tool that generates a ‘‘nutritional label’’ for rankings. It implements our research results on fairness,
-stability, and transparency for rankings. A label is presented to users as a collection of visual widgets, drawing
-an analogy to nutrition facts in the food industry. Our work in <a href="https://dl.acm.org/citation.cfm?doid=3183713.3193568">A Nutritional Label for Rankings</a>
-formalized a notion of interpretability-by-design when nutritional labels for rankings are derived automatically or
-semi-automatically as part of the complex process that gave rise to the data or model they describe.
-Code available at <a href="github.com/DataResponsibly/RankingFacts">GitHub</a>.
+Ranking Facts can be accessed at <a href="https://dataresponsibly.github.io/tools/">dataresponsibly.github.io/tools/</a>
+Source code is available at <a href="github.com/DataResponsibly/RankingFacts">GitHub</a>.
 
         </td>
       </tr>
@@ -173,29 +173,13 @@ Code available at <a href="github.com/DataResponsibly/RankingFacts">GitHub</a>.
       <tr>
         <td class="name">FairDAGs</td>
         <td class="desp">
-          <a href="https://dataresponsibly.hpc.nyu.edu/fairdags">fairDAGs</a>, a web-based tool
-that extracts directed acyclic graph (DAG) representation of the pipelines.
-It tracks the changes of the distributions of targets and groups (based on some user-specified characteristics)
-due to each operation in the pipelines. 
-<br />
+          fairDAGs is a web-based tool that extracts directed acyclic graph (DAG) representation of the pipelines.
+It tracks the changes of the distributions of targets and groups (based on some user-specified characteristics) due to each operation in the pipelines.
 
-As a starting point, our work <a href="https://hilda.io/2020/proceedings/HILDA2020_paper9.pdf">Fairness-Aware Instrumentation of Preprocessing Pipelines for Machine Learning</a>
-provided an intuitive way to interpret fairness in data science pipelines. Code available at <a href="github.com/DataResponsibly/fairDAGs">GitHub</a>.
+As a starting point, our work in <a href="https://hilda.io/2020/proceedings/HILDA2020_paper9.pdf">Fairness-Aware Instrumentation of Preprocessing Pipelines for Machine Learning</a>
+provides an intuitive way to interpret fairness in data science pipelines.
 
-        </td>
-      </tr>
-    
-      <tr>
-        <td class="name">FairDeploy</td>
-        <td class="desp">
-          With machine learning (ML) algorithms extensively applied in different applications, the need of
-incorporating responsibility into such ML-driven data science pipelines has never been more urgent. However,
-limited works have been done to provide system-level supports for users, especially those with limited ML background,
-to develop, evaluate, and manage their pipelines. 
-<br />
-
-I’m currently building a benchmark ‘‘fairDeploy’’ that
-provides systematically evaluation of technical bias in the deployment of ML algorithms.
+Code available at <a href="github.com/DataResponsibly/fairDAGs">GitHub</a>.
 
         </td>
       </tr>
